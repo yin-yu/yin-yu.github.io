@@ -1,3 +1,3 @@
 # yin-yu.github.io
 
-Yu Yin's homepage
+Welcome to Yu Yin's homepage
