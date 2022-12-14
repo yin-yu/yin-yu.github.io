@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://yuyin1.github.io/NeRFInvertor/ -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>NeRFInvertor</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./NeRFInvertor_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./NeRFInvertor_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./NeRFInvertor_files/codemirror.min.css">
+    <link rel="stylesheet" href="./NeRFInvertor_files/app.css">
+
+
+
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-20 text-center">
+                <br><br>
+                <b>NeRFInvertor</b>: High Fidelity NeRF-GAN Inversion for <br> Single-shot Real Image Animation <br>
+                <!-- <small>
+                    NeurIPS 2022 (Spotlight)
+                </small> -->
+            </h1>
+            <hr style="margin-top:0px">
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+					<li>
+                        <a href="https://yin-yu.github.io/" style="font-size: 16px;">
+                            Yu Yin
+                        </a>
+                        <sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://kamranghasedi.github.io/" style="font-size: 16px;">
+                            Kamran Ghasedi
+                        </a>
+                        <sup>2</sup>
+                    </li>
+					   <li>
+                        <a href="https://www.microsoft.com/en-us/research/people/musclewu/" style="font-size: 16px;">
+                            HsiangTao Wu
+                        </a>
+                        <sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="https://jlyang.org/" style="font-size: 16px;">
+                            Jiaolong Yang
+                        </a>
+                        <sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="http://www.xtong.info/" style="font-size: 16px;">
+                            Xin Tong
+                        </a>
+                        <sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="http://www1.ece.neu.edu/~yunfu/" style="font-size: 16px;">
+                            Yun Fu
+                        </a>
+                        <sup>1</sup>
+                    </li><br>
+                    <a></a><br>
+			        <li>
+                        <sup>1</sup>
+                        <a href="https://www.northeastern.edu/" style="font-size: 16px;">
+                            Northeastern University
+                        </a>
+                        </li>
+			        <li>
+                        <sup>2</sup>
+                        <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/" style="font-size: 16px;">
+                            Microsoft Research
+                        </a>
+			</li>
+
+                    <li>
+              
+                    </li>
+                </ul>
+            </div>
+        </div>
+		
+		<br>
+		<div class="row">
+		<div class="col-md-12 text-center">
+<!-- 			<a href="https://arxiv.org/abs/2206.07255" target="blank"><span style="text-decoration:underline;font-size:20px">arXiv:2206.07255</span></a> -->
+		</div>
+		</div>
+
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <!-- <li>
+                        <a href="https://arxiv.org/pdf/2210.06465.pdf">
+                            <img src="./NeRFInvertor_files/paper.png" height="60px">
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="https://arxiv.org/abs/2211.17235">
+                            <img src="./NeRFInvertor_files/arxiv.png" height="60px">
+                            <h4><strong>ArXiv</strong></h4>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a onclick="alert(&#39;Code will be released soon.&#39;)">
+                            <img src="./NeRFInvertor_files/github_icon.jpeg" height="60px">
+                            <h4><strong>Code</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	
+        
+
+        <!-- <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br></br>
+                <h2>
+                    Video
+                </h2>
+                <hr style="margin-top:0px">
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/Uqzs4uN6v8M" allowfullscreen=""
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+		
+		<!-- <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br></br>
+                <h2>
+                    Virtual face generation with expression and viewpoint control 
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="./files/teaser.mov" type="video/mp4">
+                </video>
+            </div>
+        </div> -->
+		
+		<div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+			
+                <a>
+                    <video style="width:100%;height:100%;" playsinline autoplay loop preload muted>
+                        <source src="./files/teaser.mov" type="video/mp4">
+                    </video>
+                </a>
+			
+                <br><br>
+			
+                <h2>
+                    Abstract
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    Nerf-based Generative models have shown impressive capacity in generating high-quality images with consistent 3D geometry. Despite successful synthesis of fake identity images randomly sampled from latent space, adopting these models for generating face images of real subjects is still a challenging task due to its so-called inversion issue. In this paper, we propose a universal method to surgically fine-tune these NeRF-GAN models in order to achieve high-fidelity animation of real subjects only by a single image. Given the optimized latent code for an out-of-domain real image, we employ 2D loss functions on the rendered image to reduce the identity gap. Furthermore, our method leverages explicit and implicit 3D regularizations using the in-domain neighborhood samples around the optimized latent code to remove geometrical and visual artifacts. Our experiments confirm the effectiveness of our method in realistic, high-fidelity, and 3D consistent animation of real faces on multiple NeRF-GAN models across different datasets.
+                </p>
+            </div>
+        </div>
+		
+		<div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Method overview
+                </h2>
+                <hr style="margin-top:0px">
+                <img src="./NeRFInvertor_files/Overview.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify" style="font-size: 16px;">
+                    <b>Framework of NeRFInvertor.</b> Given the optimized latent code z_init, we fine-tune the generator and first apply image space supervision to push the generated image to match the input image in the original view d. To augment the NeRF-GAN manifold without worrying about visual artifacts in novel views, we then leverage the surrounding samples of the optimized latent code to regularize the realism and fidelity of the novel view and expression synthesis.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Virtual talking faces driven by real videos
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" controls="" muted="">
+                    <source src="./files/talkingface_1.mov" type="video/mp4">
+                </video>
+                
+                <!--<hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                </p>
+                <video style="width:100%;height:100%;" playsinline controls muted>
+                    <source src="./files/talkingface_2.mp4" type="video/mp4">
+                </video>-->
+				
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Comparison with Inversion Methods
+
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" controls="" muted="">
+                    <source src="./files/compare_inversion.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+		
+		<div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Comparison with Single-shot NeRF Methods
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" controls="" muted="">
+                    <source src="./files/compare_singleshot_nerf.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    NeRFInvertor on GRAM (256*256)
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" controls="" muted="">
+                    <source src="./files/gram.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    NeRFInvertor on EG3D (512*512)
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    
+                </p>
+                <video style="width:100%;height:100%;" playsinline="" autoplay="" loop="" preload="" controls="" muted="">
+                    <source src="./files/eg3d.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+                <h2>
+                    Ethics and responsible AI considerations 
+                </h2>
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    This work aims to design an animatable 3D-aware face image generation method for the application of photorealistic virtual avatars. It is not intended to create content that is used to mislead or deceive. However, like other related face image generation techniques, it could still potentially be misused for impersonating humans. We condemn any behavior to create misleading or harmful contents of real person, and are interested in applying this technology for advancing 3D- and video-based forgery detection. Currently, the images generated by this method contain visual artifacts that can be easily identified. The method is data driven, and the performance is affected by the biases in the training data. One should be careful about the data collection process and ensure unbiased distrubitions of race, gender, age, among others.
+                </p>
+            </div>
+        </div>
+	
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <div class="text-center">
+                    <h2>
+                        Citation
+                    </h2>
+                </div>
+                <hr style="margin-top:0px">
+                <div class="form-group col-md-12 col-md-offset-0">
+                    <div class="CodeMirror cm-s-default CodeMirror-wrap" style="font-size: 16px;">
+                        <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px; ">
+                            <textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div>
+                        <div class="CodeMirror-vscrollbar" cm-not-content="true">
+                            <div style="min-width: 1px; height: 0px;"></div>
+                        </div>
+                        <div class="CodeMirror-hscrollbar" cm-not-content="true">
+                            <div style="height: 100%; min-height: 1px; width: 0px;"></div>
+                        </div>
+                        <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                        <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                        <div class="CodeMirror-scroll" tabindex="-1">
+                            <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-height: 162px; padding-right: 0px; padding-bottom: 0px;">
+                                <div style="position: relative; top: 0px;">
+                                    <div class="CodeMirror-lines">
+                                        <div style="position: relative; outline: none;">
+                                            <div class="CodeMirror-measure">AخA</div>
+                                            <div class="CodeMirror-measure"></div>
+                                            <div style="position: relative; z-index: 1;"></div>
+                                            <div class="CodeMirror-cursors">
+                                                <div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17.1406px;">&nbsp;</div>
+                                            </div>
+                                            <div class="CodeMirror-code" style="">
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">@inproceedings{yin2022nerfinvertor,</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  title={NeRFInvertor: High Fidelity NeRF-GAN Inversion for Single-shot Real Image Animation},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  author={Yin, Yu and Ghasedi, Kamran and Wu, HsiangTao and Yang, Jiaolong and Tong, Xin and Fu, Yun},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  booktitle={arXiv preprint arXiv:2211.17235},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  year={2022}</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">}</span></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; height: 13px; width: 1px; top: 280px;"></div>
+                            <div class="CodeMirror-gutters" style="display: none; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <br><br>
+				<!--
+                <h2>
+                    Acknowledgements
+                </h2>
+				-->
+                <hr style="margin-top:0px">
+                <p class="text-justify" style="font-size: 16px;">
+                    The website template was adapted from <a href="https://yuewuhkust.github.io/AniFaceGAN/">AniFaceGAN</a>, <a href="https://yudeng.github.io/GRAM/">GRAM</a> and <a href="https://jonbarron.info/mipnerf/">Mip-NeRF</a>.
+                </p>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
