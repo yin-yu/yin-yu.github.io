@@ -247,11 +247,6 @@
         (*co-first author)<br>
         </li>
 
-      	<li>View-consistent Object Removal in Radiance Fields<br>
-      	<span style="font-style: italic;"> ACM International Conference on Multimedia</span> (<strong>ACM MM</strong>), 2024 <br>
-        Yiren Lu, Jing Ma, and <strong>Yu Yin</strong><br>
-        </li>
-
         <li>VIVA: A Benchmark for Vision-Grounded Decision-Making with Human Values, <br>
         <span style="font-style: italic;"> Conference on Empirical Methods in Natural Language Processing </span> (<strong>EMNLP</strong>), 2024 <br>
         Zhe Hu, Yixiao Ren, Jing Li, and <strong>Yu Yin</strong><br>
@@ -266,31 +261,39 @@
       </ul>
     </tr>
 
-
-    <!--Yiren3DEditsACMMM24-->
+    <!--NeRFInvertor22-->
     <!-- <tr>
       <td>
-        <img src="./paper/ACMMM2024/XXX.png" width="224" height="119" style="margin-right: 15px;">
+        <img src="./img/NeRFInvertor.png" width="200" height="110" style="margin-right: 15px;">
+        <img src="./paper/arXiv2022_NeRFInvertor/NeRFInvertor.png" width="224" height="117" style="margin-right: 15px;">
       </td>
       <td>
-        <papertitle><a href=" ">Concentric Ring Loss for Face Forgery Detection</a></papertitle> <br><br>
-        <strong>Yu Yin</strong>, Yue Bai, Yizhou Wang, and Yun Fu <br>
-        <span style="font-style: italic;"> IEEE International Conference on Data Mining</span> (<strong>ICDM</strong>), 2023 <br>
-        <a data-toggle="modal" href="#abs22deepfakedetection" class="label label-primary">Abstract</a>
-        <a href=" " class="label label-success">arXiv</a>
-            <div class="modal fade" id="abs22deepfakedetection" tabindex="-1" role="dialog" aria-hidden="true"> <div class="modal-dialog">
+        <papertitle><a href="https://arxiv.org/abs/2211.17235">NeRFInvertor: High Fidelity NeRF-GAN Inversion for Single-shot Real Image Animation</a></papertitle> <br><br>
+        <strong>Yu Yin</strong>, Kamran Ghasedi, HsiangTao Wu, Jiaolong Yang, Xin Tong, and Yun Fu <br>
+        <span style="font-style: italic;"> IEEE/CVF Computer Vision and Pattern Recognition Conference</span> (<strong>CVPR</strong>), 2023 <br>
+        <strong>CVPR Oral</strong> 2023 <br>
+        <a href="https://arxiv.org/abs/2211.17235">[arXiv]</a>
+        <a href="https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization">[code]</a>
+        <a href="https://ma-xu.github.io/LIVE/">[project homepage]</a>
+        <a data-toggle="modal" href="#abs22NeRFInvertor" class="label label-primary">Abstract</a>
+        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Yin_NeRFInvertor_High_Fidelity_NeRF-GAN_Inversion_for_Single-Shot_Real_Image_Animation_CVPR_2023_paper.pdf" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2211.17235" class="label label-success">arXiv</a>
+        <a href="https://yuyin1.github.io/NeRFInvertor_Homepage/" class="label label-info">Webpage</a>
+        <a href="https://youtu.be/va_wrwLB-2k" class="label label-default">Demo</a>
+        <a href="https://github.com/YuYin1/NeRFInvertor" class="label label-warning">Code</a>
+            <div class="modal fade" id="abs22NeRFInvertor" tabindex="-1" role="dialog" aria-hidden="true"> <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" style="text-align: center"><strong>Concentric Ring Loss for Face Forgery Detection</strong></h4>
+                    <h4 class="modal-title" style="text-align: center"><strong>NeRFInvertor: High Fidelity NeRF-GAN Inversion for Single-shot Real Image Animation</strong></h4>
                   </div>
                   <div class="modal-body">
                       <div align="center" style="padding: 0 15px 0">
-                        <img src='./paper/arXiv2022deepfakedetection/frame.png' alt="paper model" style="width: 100%">
+                        <img src='./paper/arXiv2022_NeRFInvertor/frame.png' alt="paper model" style="width: 100%">
                       </div>
                       </br>   
                       <div style="padding: 0 30px 0">
-                        Due to growing societal concerns about indistinguishable deepfake images, face forgery detection has received an increasing amount of interest in computer vi- sion. Since the differences between actual and fake images are frequently small, improving the discriminative ability of learnt features is one of the primary prob- lems in deepfake detection. In this paper, we propose a novel Concentric Ring Loss (CRL) to encourage the model to learn intra-class compressed and inter-class separated features. Specifically, we independently add margin penalties in angu- lar and Euclidean space to force a more significant margin between real and fake images, and hence encourage better discriminating performance. Compared to softmax loss, CRL explicitly encourages intra-class compactness and inter-class separability. Extensive experiments demonstrate the superiority of our methods over multiple datasets. We show that CRL consistently outperforms the state-of- the-art by a large margin. 
+                        Nerf-based Generative models have shown impressive capacity in generating high-quality images with consistent 3D geometry. Despite successful synthesis of fake identity images randomly sampled from latent space, adopting these models for generating face images of real subjects is still a challenging task due to its so-called inversion issue. In this paper, we propose a universal method to surgically fine-tune these NeRF-GAN models in order to achieve high-fidelity animation of real subjects only by a single image. Given the optimized latent code for an out-of-domain real image, we employ 2D loss functions on the rendered image to reduce the identity gap. Furthermore, our method leverages explicit and implicit 3D regularizations using the in-domain neighborhood samples around the optimized latent code to remove geometrical and visual artifacts. Our experiments confirm the effectiveness of our method in realistic, high-fidelity, and 3D consistent animation of real faces on multiple NeRF-GAN models across different datasets.
                       </div>
                   </div>
             </div>
@@ -298,6 +301,52 @@
         <br><br>
       </td>
     </tr> -->
+
+    <!--Yiren3DEditsACMMM24-->
+    <tr>
+      <td>
+        <div style="display: flex; align-items: center; margin-bottom: 0px;">
+          <span style="width: 224px; text-align: center;  font-size: 10px; display: inline-block; word-spacing: 90px;"> Source Edited </span>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <video width="110" height="60" autoplay loop muted>
+            <source src="https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/static/videos/ori_3_spiral_050000_rgb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <span style="width: 10px; text-align: center;  font-size: 10px; display: inline-block; word-spacing: 80px;"> => </span>
+          <video width="110" height="60" autoplay loop muted>
+            <source src="https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/static/videos/3_removed_gs.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </td>
+      <td>
+        <papertitle><a href="https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/">View-consistent Object Removal in Radiance Fields</a></papertitle> <br><br>
+        Yiren Lu, Jing Ma, and <strong>Yu Yin</strong><br>
+        <span style="font-style: italic;"> ACM International Conference on Multimedia</span> (<strong>ACM MM</strong>), 2024 <br>
+        <a data-toggle="modal" href="#abs24sceneedits" class="label label-primary">Abstract</a>
+        <a href="https://dl.acm.org/doi/10.1145/3664647.3681090" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2408.02100v1" class="label label-success">arXiv</a>
+        <a href="https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/" class="label label-info">Webpage</a>
+            <div class="modal fade" id="abs24sceneedits" tabindex="-1" role="dialog" aria-hidden="true"> <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="text-align: center"><strong>View-consistent Object Removal in Radiance Fields</strong></h4>
+                  </div>
+                  <div class="modal-body">
+                      <div align="center" style="padding: 0 15px 0">
+                        <img src='https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/static/images/teaser.png' alt="paper model" style="width: 100%">
+                      </div>
+                      </br>   
+                      <div style="padding: 0 30px 0">
+                        Radiance Fields (RFs) have emerged as a crucial technology for 3D scene representation, enabling the synthesis of novel views with remarkable realism. However, as RFs become more widely used, the need for effective editing techniques that maintain coherence across different perspectives becomes evident. Current methods primarily depend on per-frame 2D image inpainting, which often fails to maintain consistency across views, thus compromising the realism of edited RF scenes. In this work, we introduce a novel RF editing pipeline that significantly enhances consistency by requiring the inpainting of only a single reference image. This image is then projected across multiple views using a depth-based approach, effectively reducing the inconsistencies observed with per-frame inpainting. However, projections typically assume photometric consistency across views, which is often impractical in real-world settings. To accommodate realistic variations in lighting and viewpoint, our pipeline adjusts the appearance of the projected views by generating multiple directional variants of the inpainted image, thereby adapting to different photometric conditions. Additionally, we present an effective and robust multi-view object segmentation approach as a valuable byproduct of our pipeline. Extensive experiments demonstrate that our method significantly surpasses existing frameworks in maintaining content consistency across views and enhancing visual quality.                      </div>
+                  </div>
+            </div>
+
+        <br><br>
+      </td>
+    </tr>
 
     <!--DerekArgumentGenerationINLG24-->
     <!-- <tr>
