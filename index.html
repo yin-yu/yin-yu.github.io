@@ -1,6 +1,104 @@
-
 <head>
   <style>
+
+    :root {
+      --font-primary: Georgia, "Times New Roman", "Songti SC", "Noto Serif CJK SC", serif;
+      --text-primary: #242424;
+      --text-heading: #111;
+      --text-muted: #555;
+      --link-blue: #1f5f8b;
+      --link-blue-hover: #143d5f;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      color: var(--text-primary);
+      font-family: var(--font-primary);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    body, table, td, th, p, li, div, span, a, strong, b, em, h1, h2, h3, h4, papertitle, .modal-title {
+      font-family: var(--font-primary) !important;
+    }
+
+    a {
+      color: var(--link-blue);
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--link-blue-hover);
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--text-heading);
+      letter-spacing: 0;
+      line-height: 1.25;
+    }
+
+    .site-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 18px 0 8px;
+      text-align: center;
+    }
+
+    .profile-name {
+      font-size: 32px;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    .profile-name .chinese-name {
+      font-size: 30px;
+    }
+
+    .top_main_heading {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 30px 0 12px;
+    }
+
+    #header table th a {
+      color: var(--text-heading);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #maincontent,
+    .content {
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .paper td {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.45;
+      vertical-align: top;
+    }
+
+    papertitle {
+      color: var(--text-heading);
+      display: inline;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    papertitle a {
+      color: var(--text-heading);
+    }
+
+    .paper span[style*="italic"] {
+      color: var(--text-muted);
+    }
 
     .round_icon{
 /*      width: 200px;
@@ -12,6 +110,56 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+    }
+
+    .paper-thumb {
+      width: 224px;
+      height: 126px;
+      object-fit: cover;
+      margin-right: 15px;
+      box-sizing: border-box;
+    }
+
+    .paper-thumb-contain {
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .paper-thumb-placeholder {
+      width: 224px;
+      height: 126px;
+      margin-right: 15px;
+      border: 1px solid #ddd;
+      background: #f8f8f8;
+      color: #555;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+      font-family: var(--font-primary);
+      line-height: 1.3;
+      box-sizing: border-box;
+    }
+
+    .paper-thumb-placeholder strong {
+      color: #333;
+      font-size: 17px;
+    }
+
+    .segment-splat-video-crop {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .segment-splat-video-crop video {
+      height: 100%;
+      left: 0;
+      max-width: none;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 200%;
     }
       
   </style>
@@ -28,6 +176,36 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+      body {
+        color: var(--text-primary);
+      }
+
+      a {
+        color: var(--link-blue);
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--link-blue-hover);
+        text-decoration: underline;
+      }
+
+      h1, h2, h3, h4,
+      papertitle,
+      papertitle a,
+      #header table th a {
+        color: var(--text-heading);
+      }
+
+      .paper td {
+        color: #333;
+      }
+
+      .paper span[style*="italic"] {
+        color: var(--text-muted);
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
 
@@ -45,19 +223,18 @@
     <div id="header">
     <div class="spacer"></div>
 
-    <!-- <h1><strong style="font-family:'Comic Sans MS'; font-size:24pt; "><div align="center">  Welcome to Yu Yin's Homepage</strong> </h1> -->
-    <h1><strong style="font-family:'Times New Roman'; font-size:24pt; "><div align="center">  Welcome to Yu Yin's Homepage</strong> </h1>
+    <h1 class="site-title"><strong>Welcome to Yu Yin's Homepage</strong></h1>
       
 
     <br>
     <table width="712" border="0" align="left" cellspacing="3" bordercolor="#999999">
       <tbody><tr bordercolor="#333333">
         <!-- <th width="19%" height="30" scope="col"><a href="https://yin-yu.github.io/#biography" class="STYLE212">Biography</a></th> -->
-        <th width="19%" scope="col"><div align="center"><span class="STYLE217" style="font-size: 18"><b style="font-family:'Times New Roman'; mso-bidi-font-weight: normal"><a href="https://yin-yu.github.io/#biography" class="STYLE212">Biography</a></b></span></div></th>
-        <th width="20%" scope="col"><div align="center"><span class="STYLE217" style="font-size: 18"><b style="font-family:'Times New Roman'; mso-bidi-font-weight: normal"><a href="https://yin-yu.github.io/#Education">Education</a></b></span></div></th>
-        <th width="22%" scope="col"><div align="center"><span class="STYLE217" style="font-size: 18"><b style="font-family:'Times New Roman'; mso-bidi-font-weight: normal"><a href="https://yin-yu.github.io/#Publications">Publications</a></b></span></div></th>
-        <th width="20%" scope="col"><div align="center"><span class="STYLE217" style="font-size: 18"><b style="font-family:'Times New Roman'; mso-bidi-font-weight: normal"><a href="https://yin-yu.github.io/#Activities">Activities</a></b></span></div></th>
-        <th width="19%" scope="col"><div align="center"><span class="STYLE217" style="font-size: 18"><b style="font-family:'Times New Roman'; mso-bidi-font-weight: normal"><a href="https://yin-yu.github.io/#Awards">Awards</a></b></span></div></th>
+        <th width="19%" scope="col"><div align="center"><b><a href="https://yin-yu.github.io/#biography" class="STYLE212">Biography</a></b></div></th>
+        <th width="20%" scope="col"><div align="center"><b><a href="https://yin-yu.github.io/#Education">Education</a></b></div></th>
+        <th width="22%" scope="col"><div align="center"><b><a href="https://yin-yu.github.io/#Publications">Publications</a></b></div></th>
+        <th width="20%" scope="col"><div align="center"><b><a href="https://yin-yu.github.io/#Activities">Activities</a></b></div></th>
+        <th width="19%" scope="col"><div align="center"><b><a href="https://yin-yu.github.io/#Awards">Awards</a></b></div></th>
       </tr>
     </tbody></table>
     <p><br>
@@ -76,10 +253,10 @@
     <td width="10%"></td>
     
     <td>  
-    <h1><strong style="font-family: 'Times New Roman';">Yu Yin  &nbsp</strong> <strong style="font-family:STFangsong; font-size:30pt; "> (印宇)</strong></h1>
+    <h1 class="profile-name"><strong>Yu Yin &nbsp;</strong><strong class="chinese-name">(印宇)</strong></h1>
     <br>
 
-  <I>PI and Lab Director of <a href="https://vulab-ai.com/"><u>VULab</u><img src="img/logo_vulab_icon1.png" alt="VULab logo" style="height: 2em; margin-left: 6px; vertical-align: middle;"></a> </I><br>
+  <I>PI and Lab Director of <a href="https://vulab-ai.com/"><u><strong>VULab</strong></u><img src="img/logo_vulab_icon1.png" alt="VULab logo" style="height: 2em; margin-left: 6px; vertical-align: middle;"></a> </I><br>
   <I>Assistant Professor, Department of CDS </I>
   <I><!-- , Case School of Engineering --><a href="https://engineering.case.edu/computer-and-data-sciences" class="STYLE189"> </I><br>
     <I>Case Western Reserve University, Cleveland, USA </I><br> <br>
@@ -90,7 +267,7 @@
     </a><br>
     </center>
 
-    <a class="menu" href="https://github.com/YuYin1" style="color: #333;">
+    <a class="menu" href="https://github.com/vulab-AI" style="color: #333;">
       <i class="fa fa-github" aria-hidden="true"></i>
       &nbsp;&nbsp; GitHub
     </a><br>
@@ -112,26 +289,29 @@
   <h4 class="text-primary" id="news"><font color = 'red';><I>What's New</I></font></h4>
     <!-- <a href="https://"> CVPR </a> --> 
     <!-- I accepted the invitation to serve as Program Committee member of IEEE MIPR 2019. -->
-
-    [2025.11] Check out our newly released <a href="https://github.com/DishengLL/Awesome-Spatial-VLMs"> <strong>Awesome-Spatial-VLMs</strong></a> github repo and <a href="https://vulab-ai.com/projects/Awesome-Spatial-VLMs">website</a>, a community-maintained companion resource to our survey paper: <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.176231405.57942913/v2"> <span style="font-style: italic;"> Spatial Intelligence in Vision-Language Models: A Comprehensive Survey </span></a>!<br> 
-    [2025.11] 1 papers accepted by <a href="https://aaai.org/conference/aaai/aaai-26/"> AAAI 2026</a>! <br> 
-    [2025.09] We have 3 papers accepted by <a href="https://neurips.cc/"> NeurIPS 2025</a>! <br> 
-    [2025.08] 3 papers accepted by <a href="https://2025.emnlp.org/"> EMNLP 2025</a> (1 main track + 2 findings). <br> 
-    [2025.05] 1 paper accepted by <a href="https://2025.aclweb.org/"> ACL 2025</a>. <br> 
-    [2025.05] We will organize The 12th IEEE International Workshop on Analysis and Modeling of Faces and Gestures (<a href="https://web.northeastern.edu/smilelab/amfg2025/">AMFG</a>) at ICCV 2025. <br> 
-    [2025.02] Our paper "Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting" is accepted by <a href="https://cvpr.thecvf.com/"> CVPR 2025</a>. Congratulations to <a href="https://yiren-lu.com/"> Yiren</a>! <br> 
-    [2024.12] 1 paper accepted by <a href="https://aaai.org/conference/aaai/aaai-25/"> AAAI 2025</a>. <br> 
-    [2024.11] Our paper on multi-agent argument generation has been accepted by <a href="https://coling2025.org/"> COLING 2025</a>. <br> 
-    [2024.09] Our paper <a href="https://vulab-ai.github.io/YESBUT_Homepage/"> <span style="font-style: italic;"> Cracking the Code of Juxtaposition</span></a> has been accepted by <a href="https://neurips.cc/Conferences/2024/Dates"> NeurIPS 2024</a> as an <strong>Oral</strong>!<br> 
-    [2024.09] We have 1 paper accepted by <a href="https://2024.emnlp.org/"> EMNLP 2024</a>.<br>
+    [2026.05] I have been honored with the <strong>UCITE Glennan Fellowship</strong> for the 2026-2027 academic year. <br>
+    [2026.05] 2 papers accepted by <a href="https://icml.cc/Conferences/2026"> <strong>ICML</strong> 2026</a>. <br>
+    [2026.04] We recieved the <strong>Breaking Boundaries Seed Grant</strong> ($15K) at CWRU. <br>
+    [2026.04] 1 <strong>TPAMI</strong> paper accepted: <a href="https://ieeexplore.ieee.org/abstract/document/11498593"><i>When 'Yes' Meets 'But': Can AI Comprehend Contradictory Humor in Comics</i></a>. The webpage is available <a href="https://vulab-ai.com/projects/yesbut-v2/">here</a>. <br>
+    [2025.11] Check out our newly released <a href="https://github.com/vulab-AI/Awesome-Spatial-VLMs"> <strong>Awesome-Spatial-VLMs</strong></a> github repo and <a href="https://vulab-ai.com/projects/Awesome-Spatial-VLMs">website</a>, a community-maintained companion resource to our survey paper: <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.176231405.57942913/v2"> <span style="font-style: italic;"> Spatial Intelligence in Vision-Language Models: A Comprehensive Survey </span></a>!<br>
+    [2025.11] 1 papers accepted by <a href="https://aaai.org/conference/aaai/aaai-26/"> <strong>AAAI</strong> 2026</a>! <br>
+    [2025.09] We have 3 papers accepted by <a href="https://neurips.cc/"> <strong>NeurIPS</strong> 2025</a>! <br>
+    [2025.08] 3 papers accepted by <a href="https://2025.emnlp.org/"> <strong>EMNLP</strong> 2025</a> (1 main track + 2 findings). <br>
+    [2025.05] 1 paper accepted by <a href="https://2025.aclweb.org/"> <strong>ACL</strong> 2025</a>. <br>
+    [2025.05] We will organize The 12th IEEE International Workshop on Analysis and Modeling of Faces and Gestures (<a href="https://web.northeastern.edu/smilelab/amfg2025/"><strong>AMFG</strong></a>) at <strong>ICCV</strong> 2025. <br>
+    [2025.02] Our paper "Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting" is accepted by <a href="https://cvpr.thecvf.com/"> <strong>CVPR</strong> 2025</a>. Congratulations to <a href="https://yiren-lu.com/"> Yiren</a>! <br>
+    [2024.12] 1 paper accepted by <a href="https://aaai.org/conference/aaai/aaai-25/"> <strong>AAAI</strong> 2025</a>. <br>
+    [2024.11] Our paper on multi-agent argument generation has been accepted by <a href="https://coling2025.org/"> <strong>COLING</strong> 2025</a>. <br>
+    [2024.09] Our paper <a href="https://vulab-ai.github.io/YESBUT_Homepage/"> <span style="font-style: italic;"> Cracking the Code of Juxtaposition</span></a> has been accepted by <a href="https://neurips.cc/Conferences/2024/Dates"> <strong>NeurIPS</strong> 2024</a> as an <strong>Oral</strong>!<br>
+    [2024.09] We have 1 paper accepted by <a href="https://2024.emnlp.org/"> <strong>EMNLP</strong> 2024</a>.<br>
     [2024.08] I recieved the Teaching Award from the Department of Computer and Data Sciences at CWRU.<br>
-    [2024.07] One paper on 3D scene editing has been accepted by <a href="https://2024.acmmm.org/"> ACM MM 2024</a>.<br>
-    [2024.07] Our paper on argument generation has been accepted by <a href="https://inlg2024.github.io/"> INLG 2024</a> (<strong>Oral</strong>).<br>
-    [2023.09] Our paper on deepfake detection has been accepted by <a href="https://www.cloud-conf.net/icdm2023/"> ICDM 2023</a>.<br>
+    [2024.07] One paper on 3D scene editing has been accepted by <a href="https://2024.acmmm.org/"> <strong>ACM MM</strong> 2024</a>.<br>
+    [2024.07] Our paper on argument generation has been accepted by <a href="https://inlg2024.github.io/"> <strong>INLG</strong> 2024</a> (<strong>Oral</strong>).<br>
+    [2023.09] Our paper on deepfake detection has been accepted by <a href="https://www.cloud-conf.net/icdm2023/"> <strong>ICDM</strong> 2023</a>.<br>
     [2023.05] I will be joining the Department of Computer and Data Science at <strong>Case Western Reserve University</strong> (<a href="https://engineering.case.edu/computer-and-data-sciences">CWRU</a>) as a Tenure-Track Assistant Professor from Fall 2023!</a><br>
-    [2023.04] We will organize The 11th IEEE International Workshop on Analysis and Modeling of Faces and Gestures (<a href="https://web.northeastern.edu/smilelab/amfg2023/">AMFG</a>) at ICCV 2023. <br> 
+    [2023.04] We will organize The 11th IEEE International Workshop on Analysis and Modeling of Faces and Gestures (<a href="https://web.northeastern.edu/smilelab/amfg2023/"><strong>AMFG</strong></a>) at <strong>ICCV</strong> 2023. <br>
     [2023.04] I received the Dissertation Completion Fellowship from Northeastern University.</a><br>
-    [2023.02] One paper on 3D face animation (<a href="https://yuyin1.github.io/NeRFInvertor_Homepage/">"NeRFInvertor"</a>) has been accepted by <a href="https://cvpr.thecvf.com/"> CVPR 2023</a>.<br>
+    [2023.02] One paper on 3D face animation (<a href="https://yuyin1.github.io/NeRFInvertor_Homepage/">"NeRFInvertor"</a>) has been accepted by <a href="https://cvpr.thecvf.com/"> <strong>CVPR</strong> 2023</a>.<br>
     <!-- <p>[July 2019] <span class="glyphicon glyphicon-plane"></span>&nbsp;  Travel to Florence, Italy - ACL 2019 <br> <p> -->
     
     <a data-toggle="modal" href="#morenews">[...] More</a> <br>  
@@ -144,25 +324,25 @@
             </div>
             <div class="modal-body">
                 <div style="padding: 0 30px 0">
-                  [2022.12] Two papers accepted by IEEE Trans. on Image Processing (TIP)!<br>
-                  [2022.07] One paper accepted by <a href="https://2022.acmmm.org/"> ACM MM 2022</a>!<br>
-                  [2022.03] One paper has been accepted by <a href="https://www.icmr2022.org/"> ACM ICMR 2022</a>.<br>
+                  [2022.12] Two papers accepted by IEEE Trans. on Image Processing (<strong>TIP</strong>)!<br>
+                  [2022.07] One paper accepted by <a href="https://2022.acmmm.org/"> <strong>ACM MM</strong> 2022</a>!<br>
+                  [2022.03] One paper has been accepted by <a href="https://www.icmr2022.org/"> <strong>ACM ICMR</strong> 2022</a>.<br>
                   [2022.02] This summer, I will be interning at<a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/"> Microsoft</a> again, working on NeRF models for face animation!<br>
-                  [2021.12] Our paper has been accepted by <a href="https://www.siam.org/conferences/cm/conference/sdm22"> SDM 2022</a>.<br>
-                  [2021.07] One paper has been accepted by <a href="https://2021.acmmm.org/"> ACM MM 2021 </a>.<br>
+                  [2021.12] Our paper has been accepted by <a href="https://www.siam.org/conferences/cm/conference/sdm22"> <strong>SDM</strong> 2022</a>.<br>
+                  [2021.07] One paper has been accepted by <a href="https://2021.acmmm.org/"> <strong>ACM MM</strong> 2021 </a>.<br>
                   [2021.02] I will be joining <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/"> Microsoft</a> this summer as a research intern focusing on image editing!<br>
-                  [2020.12] Our paper has been accepted by <a href="https://www.siam.org/conferences/cm/conference/sdm21"> SDM 2021</a>.<br>
-                  [2020.05] Our paper has been accepted by <a href="https://www.computer.org/csdl/proceedings/icdm/2020/1r54vmgaSyY"> ICDM 2020</a>.<br>
+                  [2020.12] Our paper has been accepted by <a href="https://www.siam.org/conferences/cm/conference/sdm21"> <strong>SDM</strong> 2021</a>.<br>
+                  [2020.05] Our paper has been accepted by <a href="https://www.computer.org/csdl/proceedings/icdm/2020/1r54vmgaSyY"> <strong>ICDM</strong> 2020</a>.<br>
                   [2020.01] I will be working as a research intern in <a href="https://www.zillow.com/tech/tag/computer-vision/"> Zillow</a>'s CV group, focusing on floorplan generation to benefit 3D vitual home tours!<br>
-                  [2020.03] We release the code for DA-GAN (accepted by FG 2020) at <a href="https://github.com/YuYin1/DA-GAN">Github_DA-GAN</a>.<br>
-                  [2020.03] Our paper has been accepted by <a href="https://www.computer.org/csdl/proceedings/fg/2020/1quywnlzjdS"> FG 2020</a>.<br>
-                  [2019.12] We release the code for JASRNet (accepted by AAAI 2020) at <a href="https://github.com/YuYin1/JASRNet">Github_JASRNet</a>.<br>
-                  [2019.11] Our paper has been accepted by <a href="https://aaai.org/conference/aaai/aaai-20/"> AAAI 2020</a>.<br>
+                  [2020.03] We release the code for DA-GAN (accepted by <strong>FG</strong> 2020) at <a href="https://github.com/YuYin1/DA-GAN">Github_DA-GAN</a>.<br>
+                  [2020.03] Our paper has been accepted by <a href="https://www.computer.org/csdl/proceedings/fg/2020/1quywnlzjdS"> <strong>FG</strong> 2020</a>.<br>
+                  [2019.12] We release the code for JASRNet (accepted by <strong>AAAI</strong> 2020) at <a href="https://github.com/YuYin1/JASRNet">Github_JASRNet</a>.<br>
+                  [2019.11] Our paper has been accepted by <a href="https://aaai.org/conference/aaai/aaai-20/"> <strong>AAAI</strong> 2020</a>.<br>
                   [2019.08] Our paper is accepted by Expert Systems With Applications (IF: 4.292).<br>
-                  [2019.02] Our paper is accepted by IEEE Journal of Translational Engineering in Healthand Medicine (JTEHM).<br>
-                  [2018.10] Our paper is accepted by IEEE Journal of Translational Engineering in Healthand Medicine (JTEHM).<br>
-                  [2018.06] Our paper is accepted by IJCAI Workshop 2018.<br>
-                  [2017.10] Our paper is accepted by IEEE-NIH Special Topics Conference on Healthcare Innovations and Point-of-Care Technologies (HI-POCT'17).<br>
+                  [2019.02] Our paper is accepted by IEEE Journal of Translational Engineering in Healthand Medicine (<strong>JTEHM</strong>).<br>
+                  [2018.10] Our paper is accepted by IEEE Journal of Translational Engineering in Healthand Medicine (<strong>JTEHM</strong>).<br>
+                  [2018.06] Our paper is accepted by <strong>IJCAI Workshop</strong> 2018.<br>
+                  [2017.10] Our paper is accepted by IEEE-NIH Special Topics Conference on Healthcare Innovations and Point-of-Care Technologies (<strong>HI-POCT</strong>'17).<br>
                 </div>
             </div>
           </div>
@@ -172,11 +352,11 @@
 </div>
 
 <!--Biography-->
-<h2 id="Biography" class="top_main_heading"><span style=:'Times New Roman';">Biography</span></h2>
+<h2 id="Biography" class="top_main_heading">Biography</h2>
     <p>
-    	I am a tenure-track assistant professor in the Department of Computer & Data Science at <a href="https://engineering.case.edu/computer-and-data-sciences">Case Western Reserve University</a>.
-    	Before that I received my PH.D. degree in Computer Engineering from <a href="https://www.northeastern.edu/">Northeastern University</a> in Aug. 2023. During this time, I was under the guidance and supervision of Prof. <a href="http://www1.ece.neu.edu/~yunfu/">Yun (Raymond) Fu</a> in the <a href="https://web.northeastern.edu/smilelab/">SMILE</a> Lab. 
-    	I received my master degree in Electrical & Computer Engineering from Northeastern University in Dec. 2018, and B.E degree from School of Electronic Engineering, <a href="http://english.whut.edu.cn/">Wuhan University of Technology</a>, China, in Jul. 2016. From Fall 2016, I was a member of the <a href="https://web.northeastern.edu/ostadabbas/">Augmented Cogniton (AClab)</a>, under the supervision of Prof. <a href="https://web.northeastern.edu/ostadabbas/teams/sarah-ostadabbas/">Sarah Ostadabbas</a>.
+        I am a tenure-track assistant professor in the Department of Computer & Data Science at <a href="https://engineering.case.edu/computer-and-data-sciences">Case Western Reserve University</a>.
+        Before that I received my PH.D. degree in Computer Engineering from <a href="https://www.northeastern.edu/">Northeastern University</a> in Aug. 2023. During this time, I was under the guidance and supervision of Prof. <a href="http://www1.ece.neu.edu/~yunfu/">Yun (Raymond) Fu</a> in the <a href="https://web.northeastern.edu/smilelab/">SMILE</a> Lab.
+        I received my master degree in Electrical & Computer Engineering from Northeastern University in Dec. 2018, and B.E degree from School of Electronic Engineering, <a href="http://english.whut.edu.cn/">Wuhan University of Technology</a>, China, in Jul. 2016. From Fall 2016, I was a member of the <a href="https://web.northeastern.edu/ostadabbas/">Augmented Cogniton (AClab)</a>, under the supervision of Prof. <a href="https://web.northeastern.edu/ostadabbas/teams/sarah-ostadabbas/">Sarah Ostadabbas</a>.
         <!-- I am a fifth-year Ph.D. student at Department of Electrical & Computer Engineering, <a href="https://www.northeastern.edu/">Northeastern University</a>, and work with Prof. <a href="http://www1.ece.neu.edu/~yunfu/">Yun (Raymond) Fu</a> in the <a href="https://web.northeastern.edu/smilelab/">SMILE</a> Lab. Before that I received my master degree in Electrical & Computer Engineering from Northeastern University in Dec. 2018, and B.E degree from School of Electronic Engineering, <a href="http://english.whut.edu.cn/">Wuhan University of Technology</a>, China, in Jul. 2016. From Fall 2016, I was a member of the <a href="https://web.northeastern.edu/ostadabbas/">Augmented Cogniton (AClab)</a>, under the supervision of Prof. <a href="https://web.northeastern.edu/ostadabbas/teams/sarah-ostadabbas/">Sarah Ostadabbas</a>. -->
         My research interest includes Computer Vision (& 3D Visoin), Multimodal Large Language Models (MLLM), and Embodied AI systems. 
         <!-- My recent research topics lie in unified representation learning, 3d modeling and animation, and a wide range of computer vision applications, including image synthesis, 3D novel-view synthesis, face restoration, forensics detection, 3D model generation and rendering, etc.  -->
@@ -187,7 +367,7 @@
 
 
 <!--Education-->
-<h2 id="Education" class="top_main_heading"><span style=:'Times New Roman';">Education</span></h2>
+<h2 id="Education" class="top_main_heading">Education</h2>
   <ul>
     <li>
       01/2019 - 08/2023: Ph.D. in Computer Engineering, <a href="https://www.northeastern.edu/">Northeastern University</a>, Boston, USA
@@ -203,7 +383,7 @@
 
 
 <!--Teaching-->
-<h2 id="Teaching" class="top_main_heading"><span style=:'Times New Roman';">Teaching</span></h2>
+<h2 id="Teaching" class="top_main_heading">Teaching</h2>
   <ul> 
     <li>Deep Generative Models course (CSDS 570), Case Western Reserve University, USA, 2025-2026 Spring</li>
     <li>Computer Vision course (CSDS 465), Case Western Reserve University, USA, 2024 Spring & Fall, 2025 Fall</li>
@@ -231,7 +411,7 @@
 
 
 <!--Patents-->
-<h2 id="Patents" class="top_main_heading"><span style=:'Times New Roman';">Patents</span></h2>
+<h2 id="Patents" class="top_main_heading">Patents</h2>
   <ul>
     <li>Yun Fu, <b>Yu Yin</b>, “Frontal Face Synthesis from Low-Resolution Images.” U.S. Patent Application No. 17/156,204. </li> 
     <li><b>Yu Yin</b>, Will A. Hutchcroft, Ivaylo Boyadzhiev, Sing Bing Kang, Yujie Li, Pierre Moulon, “Automated Identification And Use Of Building Floor Plan Information.” U.S. Patent Application No. 17/472,527. </li>
@@ -240,8 +420,10 @@
 
 
 <!--Awards-->
-<h2 id="Awards" class="top_main_heading"><span style=:'Times New Roman';">Awards</span></h2>
+<h2 id="Awards" class="top_main_heading">Awards</h2>
   <ul>
+    <li>UCITE Glennan Fellowship, Case Western Reserve University, USA, 2026</li>
+    <li>Breaking Boundaries Seed Grant ($15K), Case Western Reserve University, USA, 2026</li>
     <li>Teaching Award, Department of Computer and Data Sciences, Case Western Reserve University, USA, 2024</li> 
     <li><a href="https://ece.northeastern.edu/fac/annual-reports/">PhD Spotlight</a>, Northeastern University, USA, 2023</li>
     <li>Women Who Empower Innovator Awards semi-finalists, Northeastern University, USA, 2023</li> 
@@ -251,7 +433,7 @@
     <li>NSF I-Corps Grant, 2022</li> 
     <!-- <li>AAAI Travel Grant, 2020</li> -->
     <li>PhD Network Grant, Northeastern University, USA, 2019, 2023</li>
-    <li>Conference Travel Grant: AAAI'20, SIG MM'22, CVPR'23
+    <li>Conference Travel Grant: <strong>AAAI</strong>'20, <strong>SIG MM</strong>'22, <strong>CVPR</strong>'23
     <li>Excellent Bachelor Thesis of Wuhan University of Technology, 2016</li>
     <li>Scholarship of Wuhan University of Technology, 2013, 2014, 2015</li>
   </ul>
@@ -259,46 +441,46 @@
 
 
 <!--Activities-->
-<h2 id="Activities" class="top_main_heading"><span style=:'Times New Roman';">Activities</span></h2>
+<h2 id="Activities" class="top_main_heading">Activities</h2>
   <ul> 
     <li><strong>Program Chair / Organizer:</strong>
     <ul> 
-      <li> <a href="https://fulab.sites.northeastern.edu/amfg2025/">ICCV - AMFG</a> (2025) </li>
-      <li> <a href="https://fulab.sites.northeastern.edu/amfg2023/">ICCV - AMFG</a> (2023) </li>
-      <li> <a href="https://fulab.sites.northeastern.edu/amfg2021/">CVPR - AMFG</a> (2021) </li>
-      <li> <a href="https://fulab.sites.northeastern.edu/rifw2020/">FG - RFIW</a> (2020) </li>
+      <li> <a href="https://fulab.sites.northeastern.edu/amfg2025/"><strong>ICCV</strong> - <strong>AMFG</strong></a> (2025) </li>
+      <li> <a href="https://fulab.sites.northeastern.edu/amfg2023/"><strong>ICCV</strong> - <strong>AMFG</strong></a> (2023) </li>
+      <li> <a href="https://fulab.sites.northeastern.edu/amfg2021/"><strong>CVPR</strong> - <strong>AMFG</strong></a> (2021) </li>
+      <li> <a href="https://fulab.sites.northeastern.edu/rifw2020/"><strong>FG</strong> - <strong>RFIW</strong></a> (2020) </li>
     </ul>
   </ul> 
   <ul> 
     <li><strong>Area Chair:</strong>
     <ul> 
-      <li> ACL (2025-2026) </li>
-      <li> ICLR (2026) </li>
-      <li> NeurIPS (2026) </li>
+      <li> <strong>ACL</strong> (2025-2026) </li>
+      <li> <strong>ICLR</strong> (2026) </li>
+      <li> <strong>NeurIPS</strong> (2026) </li>
     </ul>
   </ul> 
   <ul> 
     <li><strong>Journal Reviewer</strong>
     <ul> 
-      <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-      <li>IEEE Transactions on Image Processing (TIP)</li>
-      <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-      <li>IEEE Transactions on Cybernetics (TCyber)</li>
-      <li>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li>
-      <li>IEEE Internet of Things (IoT)</li>
+      <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>)</li>
+      <li>IEEE Transactions on Image Processing (<strong>TIP</strong>)</li>
+      <li>IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS</strong>)</li>
+      <li>IEEE Transactions on Cybernetics (<strong>TCyber</strong>)</li>
+      <li>IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>)</li>
+      <li>IEEE Internet of Things (<strong>IoT</strong>)</li>
       <li>Information Sciences (Elsevier)</li>
     </ul>
     <li><strong>Program Committee Member</strong>
     <ul> 
-      <li>CVPR (2020-2025)</li>
-      <li>ECCV / ICCV (2020-2025)</li>
-      <li>NeurIPS (2024-2025)</li>
-      <li>ICLR (2024-2025)</li>
-      <li>ICML (2024-2025)</li>
-      <li>ACL Rolling Review (ARR) (2024-2025)</li>
-      <li>IJCAI (2019-2025)</li>
-      <li>AAAI (2021-2026)</li>
-      <li>ACM MM (2023-2025)</li>
+      <li><strong>CVPR</strong> (2020-2025)</li>
+      <li><strong>ECCV</strong> / <strong>ICCV</strong> (2020-2025)</li>
+      <li><strong>NeurIPS</strong> (2024-2025)</li>
+      <li><strong>ICLR</strong> (2024-2025)</li>
+      <li><strong>ICML</strong> (2024-2025)</li>
+      <li><strong>ACL</strong> Rolling Review (<strong>ARR</strong>) (2024-2025)</li>
+      <li><strong>IJCAI</strong> (2019-2025)</li>
+      <li><strong>AAAI</strong> (2021-2026)</li>
+      <li><strong>ACM MM</strong> (2023-2025)</li>
       <!-- <li>ICDM (2022)</li> -->
       <!-- <li>FG (2021-2024)</li> -->
     </ul>
@@ -307,97 +489,232 @@
 <hr />
 
 <!--Publications-->
-<h2 id="Publications" class="top_main_heading"><span style=:'Times New Roman';">Publications</span></h2>
+<h2 id="Publications" class="top_main_heading">Publications</h2>
   <table border="0" width="100%" class="paper" style="border-collapse:separate; border-spacing:15px; margin-left: 2%;">
     <tbody>
 
 	  <!--Preprint-->
-    <ul>
-    	<strong>Preprints</strong>
-      <ul> 
-        <li><a href="https://vulab-AI.com/projects/Awesome-Spatial-VLMs"> <strong>[Awesome-Spatial-VLMs]</strong></a> <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.176231405.57942913/v2"> Spatial Intelligence in Vision-Language Models: A Comprehensive Survey</a><br>
-        Disheng Liu, Tuo Liang, Zhe Hu, Jierui Peng, Yiren Lu, Yi Xu, Yun Fu, <strong>Yu Yin</strong><br>
-        </li>
+    <tr>
+      <td colspan="2">
+        <strong>Preprints</strong>
+        <ul>
+          <li>GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied Exploration and Reasoning</li>
 
-        <li>Counterfactual Visual Explanation via Causally-Guided Adversarial Steering</li>
-        
-        <li>ResSVD: Residual Compensated SVD for Large Language Model Compression</li>
+          <li><a href="https://vulab-AI.com/projects/Awesome-Spatial-VLMs"> <strong>[Awesome-Spatial-VLMs]</strong></a> <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.176231405.57942913/v2"> Spatial Intelligence in Vision-Language Models: A Comprehensive Survey</a><br>
+          </li>
 
-        <li>When 'YES' Meets 'BUT': Can Large Models Comprehend Contradictory Humor Through Comparative Reasoning?</li>
+          <li>Counterfactual Visual Explanation via Causally-Guided Adversarial Steering</li>
 
-        <li>Causal3D: A Comprehensive Benchmark for Causal Learning from Visual Data</li>
-      </ul>
-	  </ul>
+          <li>ResSVD: Residual Compensated SVD for Large Language Model Compression</li>
+
+          <li>Causal3D: A Comprehensive Benchmark for Causal Learning from Visual Data</li>
+        </ul>
+      </td>
+    </tr>
 
     <!--Conferences & Journals-->
     <tr>
-      <ul>
-      <strong>Conferences & Journals</strong>
-      </ul>
-      <ul>
-      <strong>2025</strong>
-      </ul>
+      <td colspan="2">
+        <strong>Conferences &amp; Journals</strong>
+      </td>
+    </tr>
 
-      <ul> 
-      	<ul> 
+    <tr>
+      <td colspan="2">
+        <strong><u>2026</u></strong>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2503.23137">When 'YES' Meets 'BUT': Can Large Models Comprehend Contradictory Humor Through Comparative Reasoning?</a><br>
+          <span style="font-style: italic;"> IEEE Transactions on Pattern Analysis and Machine Intelligence </span> (<strong>TPAMI</strong>), 2026 <br>
+          Tuo Liang, Zhe Hu, Jing Li, Hao Zhang, Yiren Lu, Yunlai Zhou, Yiren Qiao, Disheng Liu, Jierui Peng, Jing Ma, <strong>Yu Yin</strong><br>
+          </li>
 
-        <li><a href="https://arxiv.org/pdf/2503.22204">Segment then Splat: A Unified Approach for 3D Open-Vocabulary Segmentation based on Gaussian Splatting</a><br>
-        <span style="font-style: italic;"> Conference on Neural Information Processing Systems </span> (<strong>NeurIPS</strong>), 2025 <br>
+          <li><a href="https://icml.cc/virtual/2026/poster/66548">Expo-GS: Exposure-Aware Signed Distance Function in Gaussian Splatting for High Dynamic Range</a><br>
+          <span style="font-style: italic;"> International Conference on Machine Learning </span> (<strong>ICML</strong>), 2026 <br>
+          Chaoda Song, Yiren Lu, Xinpeng Li, Yunlai Zhou, Yanyan Zhang, <strong>Yu Yin</strong>, Vipin Chaudhary<br>
+          </li>
+
+          <li><a href="https://arxiv.org/pdf/2602.05143">HugRAG: Hierarchical Causal Knowledge Graph Design for RAG</a><br>
+          <span style="font-style: italic;"> International Conference on Machine Learning </span> (<strong>ICML</strong>), 2026 <br>
+          Nengbo Wang, Tuo Liang, Vikash Singh, Chaoda Song, Van Yang, <strong>Yu Yin</strong>, Jing Ma, Jagdip Singh, Vipin Chaudhary<br>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <strong><u>2025</u></strong>
+      </td>
+    </tr>
+
+    <!--SegmentThenSplat25-->
+    <tr>
+      <td>
+        <div class="paper-thumb segment-splat-video-crop">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="https://vulab-ai.github.io/Segment-then-Splat/static/videos/3DOVS_comparison_dyn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </td>
+      <td>
+        <papertitle><a href="https://vulab-ai.github.io/Segment-then-Splat/">Segment then Splat: A Unified Approach for 3D Open-Vocabulary Segmentation based on Gaussian Splatting</a></papertitle> <br><br>
         Yiren Lu, Yunlai Zhou, Yiran Qiao, Chaoda Song, Tuo Liang, Jing Ma, Huan Wang, <strong>Yu Yin</strong><br>
-        </li>
-
-        <li><a href="https://arxiv.org/pdf/2503.16965">Praxis-VLM: Vision-Grounded Decision Making via Text-Driven Reinforcement Learning</a><br>
         <span style="font-style: italic;"> Conference on Neural Information Processing Systems </span> (<strong>NeurIPS</strong>), 2025 <br>
+        <a href="https://arxiv.org/pdf/2503.22204" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2503.22204" class="label label-success">arXiv</a>
+        <a href="https://vulab-ai.github.io/Segment-then-Splat/" class="label label-info">Webpage</a>
+        <a href="https://github.com/luyr/Segment-then-Splat" class="label label-warning">Code</a>
+        <br><br>
+      </td>
+    </tr>
+
+    <!--PraxisVLM25-->
+    <tr>
+      <td>
+        <img src="https://github.com/Derekkk/Praxis-VLM/raw/main/assets/intro_figure.jpg" alt="Praxis-VLM overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://arxiv.org/abs/2503.16965">Praxis-VLM: Vision-Grounded Decision Making via Text-Driven Reinforcement Learning</a></papertitle> <br><br>
         Zhe Hu, Jing Li, Zhongzhu Pu, Hou Pong Chan, <strong>Yu Yin</strong><br>
-        </li>
-
-        <li><a href="https://arxiv.org/pdf/2510.15736">Fix False Transparency by Noise Guided Splatting</a><br>
         <span style="font-style: italic;"> Conference on Neural Information Processing Systems </span> (<strong>NeurIPS</strong>), 2025 <br>
+        <a href="https://arxiv.org/pdf/2503.16965" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2503.16965" class="label label-success">arXiv</a>
+        <a href="https://github.com/Derekkk/Praxis-VLM" class="label label-warning">Code</a>
+        <a href="https://huggingface.co/collections/zhehuderek/praxis-vlm-68192926c5ea75657e0a6115" class="label label-default">Models</a>
+        <br><br>
+      </td>
+    </tr>
+
+    <!--NoiseGuidedSplatting25-->
+    <tr>
+      <td>
+        <img src="https://opsiclear.github.io/ngs/static/figures/summary.png" alt="Noise Guided Splatting overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://opsiclear.github.io/ngs/">Fix False Transparency by Noise Guided Splatting</a></papertitle> <br><br>
         Aly El Hakie, Yiren Lu, <strong>Yu Yin</strong>, Michael W. Jenkins, Yehe Liu<br>
-        </li>
+        <span style="font-style: italic;"> Conference on Neural Information Processing Systems </span> (<strong>NeurIPS</strong>), 2025 <br>
+        <a href="https://arxiv.org/pdf/2510.15736" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2510.15736" class="label label-success">arXiv</a>
+        <a href="https://opsiclear.github.io/ngs/" class="label label-info">Webpage</a>
+        <a href="https://github.com/OpsiClear/noise_guided_splatting" class="label label-warning">Code</a>
+        <a href="https://huggingface.co/datasets/opsiclear/ngs" class="label label-default">Dataset</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="https://vulab-ai.github.io/BARD-GS/">BARD-GS: Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting</a><br>
-        <span style="font-style: italic;"> Computer Vision and Pattern Recognition Conference </span> (<strong>CVPR</strong>), 2025 <br>
+    <!--BARDGS25-->
+    <tr>
+      <td>
+        <img src="https://vulab-ai.github.io/BARD-GS/static/images/Pipeline.png" alt="BARD-GS pipeline" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://vulab-ai.github.io/BARD-GS/">BARD-GS: Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting</a></papertitle> <br><br>
         Yiren Lu, Yunlai Zhou, Disheng Liu, Tuo Liang, <strong>Yu Yin</strong><br>
-        </li>
+        <span style="font-style: italic;"> Computer Vision and Pattern Recognition Conference </span> (<strong>CVPR</strong>), 2025 <br>
+        <a href="https://arxiv.org/pdf/2503.15835" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2503.15835" class="label label-success">arXiv</a>
+        <a href="https://vulab-ai.github.io/BARD-GS/" class="label label-info">Webpage</a>
+        <a href="https://github.com/luyr/BARD-GS" class="label label-warning">Code</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="https://arxiv.org/pdf/2408.15451">Certified Causal Defense with Generalizable Robustness</a><br>
-        <span style="font-style: italic;"> The Association for the Advancement of Artificial Intelligence</span> (<strong>AAAI</strong>), 2025 <br>
+    <!--CertifiedCausalDefense25-->
+    <tr>
+      <td>
+        <img src="./paper/aaai_2025.jpg" alt="Certified Causal Defense overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://arxiv.org/abs/2408.15451">Certified Causal Defense with Generalizable Robustness</a></papertitle> <br><br>
         Yiran Qiao, <strong>Yu Yin</strong>, Chen Chen, Jing Ma<br>
-        </li>
+        <span style="font-style: italic;"> The Association for the Advancement of Artificial Intelligence</span> (<strong>AAAI</strong>), 2025 <br>
+        <a href="https://arxiv.org/pdf/2408.15451" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2408.15451" class="label label-success">arXiv</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="https://arxiv.org/pdf/2406.19643">Debate-to-Write: A Persona-Driven Multi-Agent Framework for Diverse Argument Generation</a><br>
-        <span style="font-style: italic;"> International Conference on Computational Linguistics</span> (<strong>COLING</strong>), 2025 <br>
+    <!--DebateToWrite25-->
+    <tr>
+      <td>
+        <img src="./paper/COLING_2025.jpg" alt="Debate-to-Write overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://aclanthology.org/2025.coling-main.314/">Debate-to-Write: A Persona-Driven Multi-Agent Framework for Diverse Argument Generation</a></papertitle> <br><br>
         Zhe Hu, Hou Pong Chan, Jing Li, and <strong>Yu Yin</strong><br>
-        </li>
+        <span style="font-style: italic;"> International Conference on Computational Linguistics</span> (<strong>COLING</strong>), 2025 <br>
+        <a href="https://aclanthology.org/2025.coling-main.314.pdf" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2406.19643" class="label label-success">arXiv</a>
+        <a href="https://github.com/Derekkk/LLM4ArgGen" class="label label-warning">Code</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="https://aclanthology.org/2025.findings-acl.1318/">Cautious Next Token Prediction</a><br>
-        <span style="font-style: italic;"> Findings of the Association for Computational Linguistics</span> (<strong>ACL</strong>), 2025 <br>
+    <!--CautiousNextTokenPrediction25-->
+    <tr>
+      <td>
+        <img src="https://github.com/wyzjack/CNTP/raw/main/assets/CNTP_overview.jpg" alt="CNTP overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://aclanthology.org/2025.findings-acl.1318/">Cautious Next Token Prediction</a></papertitle> <br><br>
         Yizhou Wang, Lingzhi Zhang, Yue Bai, Mang Tik Chiu, Zhengmian Hu, Mingyuan Zhang, Qihua Dong, <strong>Yu Yin</strong>, Sohrab Amirghodsi, Yun Fu<br>
-        </li>
+        <span style="font-style: italic;"> Findings of the Association for Computational Linguistics</span> (<strong>ACL</strong>), 2025 <br>
+        <a href="https://aclanthology.org/2025.findings-acl.1318.pdf" class="label label-success">Paper</a>
+        <a href="https://github.com/wyzjack/CNTP" class="label label-warning">Code</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="">Quantized but Deceptive? A Multi-Dimensional Truthfulness Evaluation of Quantized LLMs</a><br>
-        <span style="font-style: italic;"> Conference on Empirical Methods in Natural Language Processing </span> (<strong>EMNLP</strong>), 2025 (Main track)<br>
+    <!--QuantizedButDeceptive25-->
+    <tr>
+      <td>
+        <img src="./paper/EMNLP_2025.jpg" alt="Quantized but Deceptive overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://aclanthology.org/2025.emnlp-main.1548/">Quantized but Deceptive? A Multi-Dimensional Truthfulness Evaluation of Quantized LLMs</a></papertitle> <br><br>
         Yao Fu, Xianxuan Long, Runchao Li, Haotian Yu, Mu Sheng, Xiaotian Han, <strong>Yu Yin</strong>, Pan Li<br>
-        </li>
+        <span style="font-style: italic;"> Conference on Empirical Methods in Natural Language Processing </span> (<strong>EMNLP</strong>), 2025 (Main track)<br>
+        <a href="https://aclanthology.org/2025.emnlp-main.1548.pdf" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2508.19432" class="label label-success">arXiv</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="">Pruning Weights but Not Truth: Safeguarding Truthfulness While Pruning LLMs</a><br>
-        <span style="font-style: italic;"> Conference on Empirical Methods in Natural Language Processing </span> (<strong>EMNLP</strong>), 2025 (Findings track)<br>
+    <!--PruningWeightsTruth25-->
+    <tr>
+      <td>
+        <img src="./paper/EMNLP_2025_finding.jpg" alt="Pruning Weights but Not Truth overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://aclanthology.org/2025.findings-emnlp.1130/">Pruning Weights but Not Truth: Safeguarding Truthfulness While Pruning LLMs</a></papertitle> <br><br>
         Yao Fu, Runchao Li, Xianxuan Long, Haotian Yu, Xiaotian Han, <strong>Yu Yin</strong>, Pan Li<br>
-        </li>
+        <span style="font-style: italic;"> Conference on Empirical Methods in Natural Language Processing </span> (<strong>EMNLP</strong>), 2025 (Findings track)<br>
+        <a href="https://aclanthology.org/2025.findings-emnlp.1130.pdf" class="label label-success">Paper</a>
+        <a href="https://arxiv.org/abs/2509.00096" class="label label-success">arXiv</a>
+        <br><br>
+      </td>
+    </tr>
 
-        <li><a href="https://ieeexplore.ieee.org/abstract/document/11099152/">Towards Open-set Face Anti-spoofing with Unseen Attack Synthesis</a><br>
-        <span style="font-style: italic;"> IEEE 19th International Conference on Automatic Face and Gesture Recognition </span> (<strong>FG</strong>), 2025 <br>
+    <!--OpenSetFaceAntiSpoofing25-->
+    <tr>
+      <td>
+        <img src="./paper/FG_2025.jpg" alt="Open-set Face Anti-spoofing overview" class="paper-thumb paper-thumb-contain">
+      </td>
+      <td>
+        <papertitle><a href="https://ieeexplore.ieee.org/abstract/document/11099152/">Towards Open-set Face Anti-spoofing with Unseen Attack Synthesis</a></papertitle> <br><br>
         Chang Liu, Yitian Zhang, <strong>Yu Yin</strong>, Yun Fu<br>
-        </li>
+        <span style="font-style: italic;"> IEEE 19th International Conference on Automatic Face and Gesture Recognition </span> (<strong>FG</strong>), 2025 <br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/11099152/" class="label label-success">Paper</a>
+        <br><br>
+      </td>
+    </tr>
 
-     	  </ul>
-      </ul>
-
-      <ul>
-      <strong>2024 & before</strong>
-      </ul>
-
+    <tr>
+      <td colspan="2">
+        <strong><u>2024 & before</u></strong>
+      </td>
     </tr>
 
     
@@ -540,7 +857,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" style="text-align: center"><strong>Concentric Ring Loss for Face Forgery Detection</strong></h4>
+                    <h4 class="modal-title" style="text-align: center"><strong>AMERICANO: Argument Generation with Discourse-driven Decomposition and Multi-agent Interaction</strong></h4>
                   </div>
                   <div class="modal-body">
                       <div align="center" style="padding: 0 15px 0">
@@ -1097,7 +1414,7 @@
   <ul>
     <li>Analysis of Multimodal Physiological Signals Within and Across Individuals to Predict Psychological Threat vs. Challenge</a></li>
     Aya Khalaf, Mohsen Nabian, Miaolin Fan, <b>Yu Yin</b>, Jolie Wormwood, Erika Siegel, Karen S. Quigley, Lisa Feldman Barrett, Murat Akcakaya, Chun-An Chou, and Sarah Ostadabbas</br>
-    <span style="font-style: italic;">Expert Systems With Applications (<b>ESWA</b>), vol. 140, Feb. 2020. </span><br/>
+    <span style="font-style: italic;">Expert Systems With Applications (<strong>ESWA</strong>), vol. 140, Feb. 2020. </span><br/>
     <a href="https://psyarxiv.com/96djs/" class="label label-success">psyarXiv</a>
     <a data-toggle="modal" href="#absjtehm19inbed" class="label label-primary">Abstract</a>
       <div class="modal fade" id="absjtehm19inbed" tabindex="-1" role="dialog" aria-hidden="true"> <div class="modal-dialog">
@@ -1121,7 +1438,7 @@
   <ul>
     <li>An Open-Source Feature Extraction Tool for the Analysis of Peripheral Physiological Data</a></li>
     Mohsen Nabian, <b>Yu Yin</b>, Jolie Wormwood, Karen S. Quigley, Lisa F. Barrett, and Sarah Ostadabbas</br>
-    <span style="font-style: italic;">IEEE Journal of Translational Engineering in Health and Medicine</span> (<b>JTEHM</b>), vol. 6, Oct. 2019.<br/>
+    <span style="font-style: italic;">IEEE Journal of Translational Engineering in Health and Medicine</span> (<strong>JTEHM</strong>), vol. 6, Oct. 2019.<br/>
     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6231905/pdf/jtehm-ostadabbas-2878000.pdf" class="label label-success">PDF</a>
     <a data-toggle="modal" href="#absjtehmbiosp" class="label label-primary">Abstract</a>
     <a href="https://www.mathworks.com/matlabcentral/fileexchange/64013-biosignal-specific-processing-bio-sp-tool" class="label label-warning">Matlab Code</a>
